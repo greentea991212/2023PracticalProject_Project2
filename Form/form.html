@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h2>학부생 정보 입력</h2>
+      <form>
+        <fieldset>
+          <legend>인적사항</legend>
+          <label for="name">이름</label>
+          <input type="text" id="name" />
+          <br />
+          <label for="age">나이</label>
+          <input type="text" id="age" />
+          <br />
+          <label for="phone">전화번호</label>
+          <input
+            type="tel"
+            id="phone"
+            pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="'-' 포함"
+          />
+          <br>
+          <label for = "gender">성별</label>
+          <input type="radio" id = "gender" name = "gender" value="Man" checked>남</input>
+          <input type="radio" id = "gender" name = "gender" value="Woman">여</input>
+        </fieldset>
+        <fieldset>
+          <legend>학적</legend>
+          <label for="major">학부</label>
+          <select id = "major">
+            <option value="1">글로벌리더십학부</option>
+            <option value="2">전산전자공학부</option>
+            <option value="3">기계제어공학부</option>
+            <option value="4">국제어문학부</option>
+            <option value="5">상담심리사회복지학부</option>
+            <option value="6">콘텐츠융합디자인학부</option>
+            <option value="7">생명과학부</option>
+            <option value="8">법학부</option>
+            <option value="9">창의융합교육원</option>
+          </select><br>
+          <label for="grade">학년</label>
+          <select id = "grade">
+            <option value="1">1학년</option>
+            <option value="2">2학년</option>
+            <option value="3">3학년</option>
+            <option value="4">4학년</option>
+          </select>
+          <br>
+          <label for = "dom">거주지</label>
+          <select id = "dom">
+            <optgroup label="RC 거주자">
+                <option value="1">장기려</option>
+                <option value="2">열송학사</option>
+                <option value="3">카마이클</option>        
+                <option value="4">카이퍼</option>        
+                <option value="5">토레이</option>        
+            </optgroup>
+            <optgroup label="외부 거주자">
+                <option value="6">자취</option>
+                <option value="7">포항 거주자</option>
+                <option value="8">통학(타지)</option>
+            </optgroup>
+          </select>
+        </fieldset></br>
+        <fieldset>
+            <legend>추가사항</legend>
+            <label for="food">식사형태</label><br>
+            <input type ="text" id = "food" list="cafeteria">
+            <datalist id="cafeteria">
+                <option value="맘스키친"></option>
+                <option value="버거킹"></option>
+                <option value="학관식당"></option>
+                <option value="그레이스 키친"></option>
+            </datalist>
+        </input>
+        <br>
+            <label for="coment">요구사항</label><br>
+            <textarea cols="40" rows="5" placeholder="요구사항이 있다면, 기재해주세요."></textarea>
+
+        </fieldset>
+        <fieldset>
+            위 정보가 데이터 수집에 이용되는 것에 동의합니다.
+        <input type = "checkbox"></input><br><br>
+        제출일
+        <input type="date"> </input>
+        </fieldset><br>
+        <input type ="submit" value="제출"></input>
+        <input type = "reset" value="취소"/>
+      </form>
+    </div>
+  </body>
+</html>
